@@ -21,6 +21,22 @@ function increasePercent() {
 
 increasePercent()
 
+document.addEventListener('keydown', (event) => {
+    const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+    if(key === "ArrowUp") {
+        percent++;
+        percent_text.innerText = percent.toString()
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+    if(key === "ArrowDown") {
+        percent--;
+        percent_text.innerText = percent.toString()
+    }
+});
+
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
